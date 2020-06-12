@@ -4,6 +4,9 @@ START = 'Selamat Datang tuan...\n' \
         'Perkenalkan Aku Isla 🙋 yang dirancang oleh Bayu Kartiko 💻 \n\n' \
         '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n' \
         'ketik /help untuk mengetahui semua interaksi saya\n\n' \
+        '>>> Tugas bot terkoneksi database <<<\n' \
+        '👉 ketik /datasiswa untuk melihat data siswa didalam database\n' \
+        '>//<\n\n' \
         '-- admin & developer Bayu Kartiko - Siswa XI RPL 2 SMK Taruna Bhakti --'
 #=======================================================================================================================
 HELP = 'Ada yang bisa saya bantu ?\n' \

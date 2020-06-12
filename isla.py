@@ -14,6 +14,10 @@ tanggakskrng = date.today()
 tanggalsekarang = date.today().strftime("%d %B, %Y")
 tanggalwaktusekarang = datetime.now()
 
+# database
+myDbSiswa = mysql.connector.connect(host='localhost', user='root', password='', database='db_belajarbot')
+sql = myDbSiswa.cursor()
+from telebot import apihelper
 
 class Isla:
     def __init__(self):
@@ -38,5 +42,28 @@ class Isla:
         teksAbout = mytoken.ABOUT
         isla.reply_to(message, teksAbout)
 
+    @isla.message_handler(commands=['datasiswa'])
+    def datasiswa(message):
+        query = "select nipd,nama,kelas from tabel_siswa"
+        sql.execute(query)
+        data = sql.fetchall()
+        jumlahData = sql.rowcount
+        kumpulanData = ''
+        if(jumlahData>0):
+            no=0
+            for x in data:
+                no += 1
+                kumpulanData = kumpulanData + str(x)
+                print(kumpulanData)
+                kumpulanData = kumpulanData.replace('(', '')
+                kumpulanData = kumpulanData.replace(')', '')
+                kumpulanData = kumpulanData.replace("'", '')
+                kumpulanData = kumpulanData.replace(",", '')
+        else:
+            print('data kosong')
+
+        isla.reply_to(message, str(kumpulanData))
+
+print(myDbSiswa)
 print("bot sedang berjalan")
 isla.polling(none_stop=True)
