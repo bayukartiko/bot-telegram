@@ -16,7 +16,9 @@ HELP = 'Ada yang bisa Isla bantu ?\n' \
        '👉 Ketik /start - untuk berinteraksi dengan saya\n' \
        '👉 ketik /about - untuk mengetahui tentang saya\n' \
        '👉 ketik /pp - untuk melihat foto Isla\n' \
-       '👉 ketik /datasiswa - untuk tugas (koneksi ke database)'
+       '👉 ketik /datasiswa - untuk tugas (koneksi ke database)\n\n' \
+       'atau kamu juga bisa menghubungi tuan saya agar lebih jelas\n' \
+       'kamu bisa menghubungi tuan saya dengan mengklik tombol dibawah ini 👇👇'
 #=======================================================================================================================
 ABOUT = "Saya adalah bot yang dibuat oleh developer Bayu Kartiko 🤖 \n" \
         "Saya diberi nama 'Isla' oleh developer saya \n" \
